@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+@import './_variable.scss';
+
+.follow{
+    margin-bottom: 146px;
+    .follow_main{
+        border-top: 0.5px solid $textColor;
+        .follow_imgs{
+            display: flex;
+            gap: 1px;
+            .follow_img1{
+                position: relative;
+                img{
+                    
+                    &:nth-of-type(2){
+                        position: absolute;
+                        top: -40px;
+                        left: 80px;
+                        z-index: 1;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:1398px){
+    .follow{
+        position: relative;
+        .follow_main{
+            .follow_imgs{
+                padding-top: 200px;
+                row-gap: 70px;
+                column-gap: 10px;
+                display: grid;
+                grid-template-areas: 
+                                     'img2 img3'
+                                     'img4 img5';
+                justify-content: center;
+                .fi1{
+                    grid-area: img2;
+                    margin-top: 100px;
+                }
+                
+                .fi2{
+                    grid-area: img3;
+                    margin-top: 100px;                
+                }
+                
+                .fi3{
+                    position: absolute;
+                    display: flex;
+                    justify-self: center;
+                    top: 0;
+                    margin-bottom: 20px;
+                    margin-top: 20px;
+                }
+                
+                .fi4{
+                    grid-area: img4;
+                
+                }
+                .fi5{
+                    grid-area: img5;
+                    
+                }
+
+                
+            }
+        }
+    }
+}
+
+@media(max-width:481px){
+    .follow{
+        position: relative;
+        .follow_main{
+            .follow_imgs{
+                padding-top: 200px;
+                row-gap: 70px;
+                column-gap: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+                .fi1{
+                   
+                    margin-top: 70px;
+                }
+                
+                .fi2{
+                    
+                    margin-top: 0px;                
+                }
+                .fi3{
+                    img{
+                        width: 250px;
+                    }
+                }
+                
+                
+
+                
+            }
+        }
+    }
+}

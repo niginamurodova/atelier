@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+@import './_variable.scss';
+
+.services{
+    margin-bottom: 400px;
+    .services_main{
+        
+        p{
+            text-align: center;
+            color: $textColor;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 22px;
+
+
+        }
+        h1{
+            text-align: center;
+            font-weight: 400;
+            font-size: 60px;
+            line-height: 70px;
+            color: $mainColor;
+            margin-bottom: 60px;
+        }
+
+        .services_boxes{
+            display: flex;
+            .services_box{
+                padding: 61px;
+                border: 1px solid $textColor;
+                h2{
+                    color: $mainColor;
+                }
+                p{
+                    text-align: left;
+                    color: $textColor;
+                }
+                h6{
+                    color: $textColor;
+
+                }
+                &:nth-of-type(1){
+                    position: absolute;
+                }
+                &:nth-of-type(2){
+                    position: absolute;
+                    margin-top: 5px;
+                    margin-left: 370px;
+                }
+                &:nth-of-type(3){
+                    position: absolute;
+                    margin-top: 15px;
+                    margin-left: 740px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:1334px){
+    .services{
+        margin-bottom: 200px;
+        .services_main{
+            .services_boxes{
+                flex-direction: column;
+                gap: 20px;
+                justify-content: center;
+                align-items: center;
+                .services_box{
+                     
+                    &:nth-of-type(1){
+                        position: inherit;
+                    }
+                    &:nth-of-type(2){
+                        position: inherit;
+                        margin: 0;
+
+                    }
+                    &:nth-of-type(3){
+                        position: inherit;
+                        margin: 0;
+
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media(max-width:415px){
+    .services{
+        margin-bottom: 100px;
+
+        .services_main{
+            h1{
+                font-size: 2.5rem;
+            }
+            .services_boxes{
+                .services_box{
+                    padding: 20px;
+                }
+            }
+        }
+    }
+}

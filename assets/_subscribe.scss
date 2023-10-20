@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+@import './_variable.scss';
+
+.subscribe{
+    font-family: 'Old Standard TT';
+    .subscribe_main{
+        h1{
+            font-weight: 400;
+            font-size: 60px;
+            line-height: 70px;
+            color: $mainColor;
+            text-align: center;
+            margin-bottom: 20px;
+
+        }
+        p{
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 28px;
+            color: $textColor;
+            text-align: center;
+            margin-bottom: 21px;
+            position: relative;
+            span{
+                color: $mainColor;
+                position: absolute;
+                top: -5px;
+                margin-left: 4px;
+
+                &:nth-of-type(2){
+                    top: 24px;
+                }
+
+                
+
+            }
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 42px;
+            input{
+                width: 420px;
+                height: 59px;
+                background-color: inherit;
+                border: 1px solid $textColor;
+                outline: none;
+                color: $textColor;
+                padding: 20px;
+            }
+            button{
+                width: 420px;
+                height: 59px;
+                background-color: $mainColor;
+                
+            }
+            
+            
+        }
+        .subscribe_icons{
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+    }
+}
+@media(max-width:540px){
+    .subscribe{
+        .subscribe_main{
+            h1{
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+@media(max-width:441px){
+    .subscribe{
+        .subscribe_main{
+            h1{
+                font-size: 2rem;
+                line-height: 60px;
+
+            }
+            form{
+                input{
+                    width: 100%;
+                }
+                button{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.copyright{
+    .copyright_main{
+        border-top: 1px solid $textColor ;
+        display: flex;
+        justify-content: space-between;
+        color: $textColor;
+        p{
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 22px;
+            span{
+                color: $mainColor;
+            }
+        }
+
+        #span{
+            color: $mainColor;
+            margin-right: 5px;
+            position: relative;
+            &::after{
+                position: absolute;
+                content: ' ';
+                background-color: $mainColor;
+                height: 15px;
+                width: 1px;
+                margin-left: 4px;
+                top: 2px;
+                
+            }
+            &:nth-of-type(3)::after{
+                display: none;
+            }
+        }
+    }
+}
+
+@media(max-width:464px)
+{
+    .copyright{
+        .copyright_main{
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+}

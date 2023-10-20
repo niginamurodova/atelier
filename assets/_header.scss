@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+@import './_variable.scss';
+header{
+    font-family: 'Source Serif Pro', serif;
+    // overflow: hidden;
+    .header_main{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .navbar{
+            display: flex;
+            gap: 42px;
+            align-items: center;
+
+            .header_logo{
+                h1{
+                    color: $mainColor;
+                    font-weight: 400;
+                    font-size: 22px;
+                    line-height: 28px;
+    
+                }
+            }
+            nav{
+                transition: all 0.2s;
+                ul{
+                    display: flex;
+                    gap: 28px;
+                    li{
+                        a{
+                            color: $textColor;
+                            &:hover{
+                                color: $mainColor;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            input{
+                display: none;
+            }
+            label{
+                display: none;
+            }
+            #check:checked + nav{
+                left: 0;
+            }
+            
+        }
+        button{
+            border: 1px solid #FFAE2B;
+            background-color: #181511;
+            color: $mainColor;
+            width: 147px;
+            height: 52px;
+        }
+    }
+}
+
+@media(max-width:735px){
+    header{
+        .header_main{
+            button{
+                display: none;
+                position: absolute;
+            }
+            
+        }
+    }
+}
+
+@media(max-width:564px){
+    header{
+        .header_main{
+            .navbar{
+                .material-symbols-outlined{
+                    color: #fff;
+                }
+                label{
+                    display: block;
+                    position: absolute;
+                    right: 25px;
+                }
+                nav{
+                    position: fixed;
+                    top: 80px;
+                    width: 100%;
+                    background-color: #181511;
+                    left: -100vw;
+                    right: 0;
+                    height: calc(100vh - 80px);
+                    padding-top: 30px;
+                    ul{
+                        flex-direction: column;
+                        align-items: center;
+                        
+                        
+                    }
+                }
+            }
+            
+        }
+    }
+}
+

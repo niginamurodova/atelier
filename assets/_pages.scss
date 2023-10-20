@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+@import './_variable.scss';
+
+.pages{
+    padding-top: 120px;
+    padding-bottom: 121px;
+    .pages_main{
+        text-align: center;
+        p{
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 22px;
+            color: $textColor;
+            margin-bottom: 10px;
+
+        }
+        h1{
+            font-weight: 400;
+            font-size: 60px;
+            line-height: 70px;
+            color: $mainColor;
+            margin-bottom: 60px;
+        }
+        .pages_imgs{
+            display: grid;
+            grid-template-columns: repeat(3, 387px);
+            justify-content: center;    
+            gap: 20px;
+            .pages_img{
+                padding: 11px;
+                border: 1px solid $textColor;
+            }
+        }
+    }
+}
+
+
+.img{
+    img{
+        width: 100%;
+
+    }
+}
+@media(max-width:640px){
+    .img{
+        img{
+            height: 206px;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}
+
+
+@media(max-width:1420px){
+    .pages{
+        .pages_main{
+            .pages_imgs{
+                .pages_img{
+                    &:last-child{
+                        display: none;
+                    }
+                }
+                grid-template-columns: repeat(2, 387px);
+            }
+        }
+    }
+}
+
+@media(max-width:837px){
+    .pages{
+        .pages_main{
+            h1{
+                font-size: 3rem;
+            }
+            .pages_imgs{
+                grid-template-columns: repeat(1, 387px);
+
+            }
+        }
+    }
+}
+
+@media(max-width:394px){
+    .pages{
+        padding-bottom: 80px;
+        .pages_main{
+            h1{
+                font-size: 2rem;
+            }
+            .pages_imgs{
+                
+                grid-template-columns: repeat(1, 300px);
+                .pages_img{
+                    align-items: center;
+                    padding: 0;
+                    img{
+                        width: 287px;
+                    }
+                }
+            }
+        }
+    }
+}
+
